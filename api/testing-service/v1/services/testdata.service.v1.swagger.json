@@ -1,0 +1,398 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "api/testing-service/v1/services/testdata.service.v1.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "SrvTestdata"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/testdata/bidirectional-stream": {
+      "get": {
+        "summary": "BidirectionalStream A Bidirectional streaming RPC.",
+        "operationId": "SrvTestdata_BidirectionalStream",
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/resourcev1TestResp"
+                },
+                "error": {
+                  "$ref": "#/definitions/rpcStatus"
+                }
+              },
+              "title": "Stream result of resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/client-to-server": {
+      "get": {
+        "summary": "ClientToServer A client-to-server streaming RPC.",
+        "operationId": "SrvTestdata_ClientToServer",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/get": {
+      "get": {
+        "summary": "Get Get",
+        "operationId": "SrvTestdata_Get",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/post": {
+      "delete": {
+        "summary": "Delete Delete",
+        "operationId": "SrvTestdata_Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      },
+      "post": {
+        "summary": "Post Post",
+        "operationId": "SrvTestdata_Post",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestReq"
+            }
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      },
+      "patch": {
+        "summary": "Patch Patch",
+        "operationId": "SrvTestdata_Patch",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestReq"
+            }
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/put": {
+      "put": {
+        "summary": "Put Put",
+        "operationId": "SrvTestdata_Put",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestReq"
+            }
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/server-to-client": {
+      "get": {
+        "summary": "ServerToClient A server-to-client streaming RPC.",
+        "operationId": "SrvTestdata_ServerToClient",
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/resourcev1TestResp"
+                },
+                "error": {
+                  "$ref": "#/definitions/rpcStatus"
+                }
+              },
+              "title": "Stream result of resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    },
+    "/api/v1/testdata/websocket": {
+      "get": {
+        "summary": "Websocket websocket",
+        "operationId": "SrvTestdata_Websocket",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/resourcev1TestResp"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "message",
+            "description": "请求消息",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "SrvTestdata"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "resourcev1TestReq": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "title": "请求消息"
+        }
+      },
+      "title": "TestReq 请求"
+    },
+    "resourcev1TestResp": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "data": {
+          "$ref": "#/definitions/resourcev1TestRespData"
+        }
+      },
+      "title": "TestResp 响应"
+    },
+    "resourcev1TestRespData": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}
