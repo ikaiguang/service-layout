@@ -1,0 +1,12 @@
+# server 服务
+server:
+  http:
+    enable: true
+    network:
+    addr: 0.0.0.0:9991
+    timeout: 60s
+  grpc:
+    enable: true
+    network:
+    addr: 0.0.0.0:9992
+    timeout: 60s

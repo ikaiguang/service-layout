@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package saas.api.testing.errorv1;
+
+import "errors/errors.proto";
+
+// 多语言特定包名，用于源代码引用
+option go_package           = "github.com/ikaiguang/service-layout/api/testing-service/v1/errors;errorv1";
+option java_multiple_files  = true;
+option java_package         = "saas.api.testing.errorv1";
+option java_outer_classname = "SaasApiTestingErrorV1";
+
+// ERROR .
+enum ERROR {
+  option (errors.default_code) = 500;
+
+  UNKNOWN = 0 [(errors.code) = 500];
+}

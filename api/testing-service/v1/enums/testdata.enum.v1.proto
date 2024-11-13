@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package saas.api.testing.enumv1;
+
+option go_package           = "github.com/ikaiguang/service-layout/api/testing-service/v1/enums;enumv1";
+option java_multiple_files  = true;
+option java_package         = "saas.api.testing.enumv1";
+option java_outer_classname = "SaasApiTestingEnumV1";
+
+// TestdataInitEnum TestdataInitEnum enum
+message TestdataInitEnum {
+  // TestdataInit TestdataInit enum
+  enum TestdataInit {
+    // UNSPECIFIED 未指定
+    UNSPECIFIED = 0;
+  }
+}
