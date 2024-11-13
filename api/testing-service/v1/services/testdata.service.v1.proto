@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package saas.api.testing.servicev1;
+package kit.api.testing.servicev1;
 
 // 多语言特定包名，用于源代码引用
 option go_package           = "github.com/ikaiguang/service-layout/api/testing-service/v1/services;servicev1";
 option java_multiple_files  = true;
-option java_package         = "saas.api.testing.servicev1";
-option java_outer_classname = "SaasApiTestingServiceV1";
+option java_package         = "kit.api.testing.servicev1";
+option java_outer_classname = "KitApiTestingServiceV1";
 
 import "google/api/annotations.proto";
 import "api/testing-service/v1/resources/testdata.resource.v1.proto";
@@ -14,14 +14,14 @@ import "api/testing-service/v1/resources/testdata.resource.v1.proto";
 // SrvTestdata 测试
 service SrvTestdata {
   // Websocket websocket
-  rpc Websocket(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Websocket(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       get: "/api/v1/testdata/websocket"
     };
   }
 
   // Get Get
-  rpc Get(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Get(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       get: "/api/v1/testdata/get"
       // body:"*" // WARN: GET xxx body should not be declared.
@@ -29,7 +29,7 @@ service SrvTestdata {
   }
 
   // Put Put
-  rpc Put(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Put(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       put: "/api/v1/testdata/put"
       body: "*"
@@ -37,7 +37,7 @@ service SrvTestdata {
   }
 
   // Post Post
-  rpc Post(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Post(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       post: "/api/v1/testdata/post"
       body: "*"
@@ -45,7 +45,7 @@ service SrvTestdata {
   }
 
   // Delete Delete
-  rpc Delete(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Delete(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       delete: "/api/v1/testdata/post"
       // body:"*" // WARN: DELETE xxx body should not be declared.
@@ -53,7 +53,7 @@ service SrvTestdata {
   }
 
   // Patch Patch
-  rpc Patch(saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc Patch(kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       patch: "/api/v1/testdata/post"
       body: "*"
@@ -61,21 +61,21 @@ service SrvTestdata {
   }
 
   // ServerToClient A server-to-client streaming RPC.
-  rpc ServerToClient(saas.api.testing.resourcev1.TestReq) returns (stream saas.api.testing.resourcev1.TestResp) {
+  rpc ServerToClient(kit.api.testing.resourcev1.TestReq) returns (stream kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       get: "/api/v1/testdata/server-to-client"
     };
   }
 
   // ClientToServer A client-to-server streaming RPC.
-  rpc ClientToServer(stream saas.api.testing.resourcev1.TestReq) returns (saas.api.testing.resourcev1.TestResp) {
+  rpc ClientToServer(stream kit.api.testing.resourcev1.TestReq) returns (kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       get: "/api/v1/testdata/client-to-server"
     };
   }
 
   // BidirectionalStream A Bidirectional streaming RPC.
-  rpc BidirectionalStream(stream saas.api.testing.resourcev1.TestReq) returns (stream saas.api.testing.resourcev1.TestResp) {
+  rpc BidirectionalStream(stream kit.api.testing.resourcev1.TestReq) returns (stream kit.api.testing.resourcev1.TestResp) {
     option (google.api.http) = {
       get: "/api/v1/testdata/bidirectional-stream"
     };

@@ -2,7 +2,8 @@
 
 **启动服务；启动请检查配置文件；如果使用配置中心，请跳过执行，先阅读`服务配置`部分**
 
-参考配置文件：[config_all.yaml](https://github.com/ikaiguang/go-srv-kit/blob/main/testdata/configs/configs/config_all.yaml)
+* 配置文件示例：[config_all.yaml](https://github.com/ikaiguang/go-srv-kit/blob/main/testdata/configs/configs/config_all.yaml)
+* 创建新的项目：[create-new-project](./README-NEW-PROJECT.md)
 
 ```shell
 
@@ -11,9 +12,13 @@ make help
 
 # 运行服务
 make run-service
+# or
+make run-all-in-one
 
 # 测试服务
 make testing-service
+# or
+make testing-all-in-one
 ```
 
 ## 服务配置

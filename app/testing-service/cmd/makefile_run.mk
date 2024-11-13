@@ -27,4 +27,5 @@ run-service:
 .PHONY: testing-service
 # testing service :-->: testing testing-service
 testing-service:
+	curl http://127.0.0.1:9991/api/v1/testdata/get?message=hello
 

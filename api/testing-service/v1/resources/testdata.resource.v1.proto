@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package saas.api.testing.resourcev1;
+package kit.api.testing.resourcev1;
 
 // 多语言特定包名，用于源代码引用
 option go_package           = "github.com/ikaiguang/service-layout/api/testing-service/v1/resources;resourcev1";
 option java_multiple_files  = true;
-option java_package         = "saas.api.testing.resourcev1";
-option java_outer_classname = "SaasApiTestingResourceV1";
+option java_package         = "kit.api.testing.resourcev1";
+option java_outer_classname = "KitApiTestingResourceV1";
 
 // TestReq 请求
 message TestReq {

@@ -20,12 +20,12 @@ var _ = binding.EncodeURL
 
 const _ = http.SupportPackageIsVersion1
 
-const OperationSrvTestdataDelete = "/saas.api.testing.servicev1.SrvTestdata/Delete"
-const OperationSrvTestdataGet = "/saas.api.testing.servicev1.SrvTestdata/Get"
-const OperationSrvTestdataPatch = "/saas.api.testing.servicev1.SrvTestdata/Patch"
-const OperationSrvTestdataPost = "/saas.api.testing.servicev1.SrvTestdata/Post"
-const OperationSrvTestdataPut = "/saas.api.testing.servicev1.SrvTestdata/Put"
-const OperationSrvTestdataWebsocket = "/saas.api.testing.servicev1.SrvTestdata/Websocket"
+const OperationSrvTestdataDelete = "/kit.api.testing.servicev1.SrvTestdata/Delete"
+const OperationSrvTestdataGet = "/kit.api.testing.servicev1.SrvTestdata/Get"
+const OperationSrvTestdataPatch = "/kit.api.testing.servicev1.SrvTestdata/Patch"
+const OperationSrvTestdataPost = "/kit.api.testing.servicev1.SrvTestdata/Post"
+const OperationSrvTestdataPut = "/kit.api.testing.servicev1.SrvTestdata/Put"
+const OperationSrvTestdataWebsocket = "/kit.api.testing.servicev1.SrvTestdata/Websocket"
 
 type SrvTestdataHTTPServer interface {
 	// Delete Delete Delete

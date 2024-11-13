@@ -20,15 +20,15 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	SrvTestdata_Websocket_FullMethodName           = "/saas.api.testing.servicev1.SrvTestdata/Websocket"
-	SrvTestdata_Get_FullMethodName                 = "/saas.api.testing.servicev1.SrvTestdata/Get"
-	SrvTestdata_Put_FullMethodName                 = "/saas.api.testing.servicev1.SrvTestdata/Put"
-	SrvTestdata_Post_FullMethodName                = "/saas.api.testing.servicev1.SrvTestdata/Post"
-	SrvTestdata_Delete_FullMethodName              = "/saas.api.testing.servicev1.SrvTestdata/Delete"
-	SrvTestdata_Patch_FullMethodName               = "/saas.api.testing.servicev1.SrvTestdata/Patch"
-	SrvTestdata_ServerToClient_FullMethodName      = "/saas.api.testing.servicev1.SrvTestdata/ServerToClient"
-	SrvTestdata_ClientToServer_FullMethodName      = "/saas.api.testing.servicev1.SrvTestdata/ClientToServer"
-	SrvTestdata_BidirectionalStream_FullMethodName = "/saas.api.testing.servicev1.SrvTestdata/BidirectionalStream"
+	SrvTestdata_Websocket_FullMethodName           = "/kit.api.testing.servicev1.SrvTestdata/Websocket"
+	SrvTestdata_Get_FullMethodName                 = "/kit.api.testing.servicev1.SrvTestdata/Get"
+	SrvTestdata_Put_FullMethodName                 = "/kit.api.testing.servicev1.SrvTestdata/Put"
+	SrvTestdata_Post_FullMethodName                = "/kit.api.testing.servicev1.SrvTestdata/Post"
+	SrvTestdata_Delete_FullMethodName              = "/kit.api.testing.servicev1.SrvTestdata/Delete"
+	SrvTestdata_Patch_FullMethodName               = "/kit.api.testing.servicev1.SrvTestdata/Patch"
+	SrvTestdata_ServerToClient_FullMethodName      = "/kit.api.testing.servicev1.SrvTestdata/ServerToClient"
+	SrvTestdata_ClientToServer_FullMethodName      = "/kit.api.testing.servicev1.SrvTestdata/ClientToServer"
+	SrvTestdata_BidirectionalStream_FullMethodName = "/kit.api.testing.servicev1.SrvTestdata/BidirectionalStream"
 )
 
 // SrvTestdataClient is the client API for SrvTestdata service.
@@ -468,7 +468,7 @@ func (x *srvTestdataBidirectionalStreamServer) Recv() (*resources.TestReq, error
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SrvTestdata_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "saas.api.testing.servicev1.SrvTestdata",
+	ServiceName: "kit.api.testing.servicev1.SrvTestdata",
 	HandlerType: (*SrvTestdataServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

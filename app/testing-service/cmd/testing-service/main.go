@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	serverutil "github.com/ikaiguang/go-srv-kit/service/server"
+	serviceexporter "github.com/ikaiguang/service-layout/app/testing-service/cmd/testing-service/export"
 	stdlog "log"
 )
 
