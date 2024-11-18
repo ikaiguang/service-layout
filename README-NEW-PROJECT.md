@@ -10,5 +10,6 @@ github.com/ikaiguang/service-layout -> github.com/your-name/your-service
 # 运行
 # go mod download && go mod tidy
 make run-all-in-one
-make testing-all-in-one
+make testing-all-in-one# 删除文件
+rm README-NEW-PROJECT.md
 ```
