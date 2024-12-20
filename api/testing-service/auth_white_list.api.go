@@ -1,4 +1,4 @@
-package testingdapi
+package testingapi
 
 import (
 	_ "github.com/gorilla/websocket"

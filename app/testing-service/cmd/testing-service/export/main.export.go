@@ -7,7 +7,7 @@ import (
 	middlewareutil "github.com/ikaiguang/go-srv-kit/service/middleware"
 	serverutil "github.com/ikaiguang/go-srv-kit/service/server"
 	setuputil "github.com/ikaiguang/go-srv-kit/service/setup"
-	testingdapi "github.com/ikaiguang/service-layout/api/testing-service"
+	testingapi "github.com/ikaiguang/service-layout/api/testing-service"
 	servicev1 "github.com/ikaiguang/service-layout/api/testing-service/v1/services"
 	"github.com/ikaiguang/service-layout/app/testing-service/cmd/database-migration/migrate"
 	"github.com/ikaiguang/service-layout/app/testing-service/internal/conf"
@@ -19,7 +19,7 @@ func ExportServiceConfig() []configutil.Option {
 
 func ExportAuthWhitelist() []map[string]middlewareutil.TransportServiceKind {
 	return []map[string]middlewareutil.TransportServiceKind{
-		testingdapi.GetAuthWhiteList(),
+		testingapi.GetAuthWhiteList(),
 	}
 }
 
