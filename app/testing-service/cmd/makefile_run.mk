@@ -16,7 +16,7 @@ run-testing-service:
 .PHONY: testing-testing-service
 # testing service :-->: testing testing-service
 testing-testing-service:
-	go run testdata/get-node-id/main.go
+	curl http://127.0.0.1:9991/api/v1/testdata/get?message=hello
 
 .PHONY: run-service
 # run service :-->: run testing-service
