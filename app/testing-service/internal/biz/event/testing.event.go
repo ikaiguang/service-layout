@@ -1,8 +1,11 @@
 package events
 
 import (
+	"context"
 	"github.com/go-kratos/kratos/v2/log"
+	errorpkg "github.com/ikaiguang/go-srv-kit/kratos/error"
 	bizrepos "github.com/ikaiguang/service-layout/app/testing-service/internal/biz/repo"
+	"gitlab.realibox.cn/hubv3tools/protobuf/types/known/emptypb"
 )
 
 type testingEvent struct {
@@ -17,4 +20,16 @@ func NewTestingEvent(
 	return &testingEvent{
 		log: logHelper,
 	}
+}
+
+func (t testingEvent) Send(ctx context.Context, msg emptypb.Empty) error {
+	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
+}
+
+func (t testingEvent) Receive(ctx context.Context, handler bizrepos.Handler) error {
+	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
+}
+
+func (t testingEvent) Close() error {
+	return nil
 }
