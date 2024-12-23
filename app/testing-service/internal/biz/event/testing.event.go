@@ -30,6 +30,6 @@ func (t *testingEvent) Receive(ctx context.Context, handler bizrepos.Handler) er
 	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
 }
 
-func (t *testingEvent) Close() error {
+func (t *testingEvent) Close(ctx context.Context) error {
 	return nil
 }

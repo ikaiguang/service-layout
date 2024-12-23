@@ -10,5 +10,5 @@ type Handler func(context.Context, *emptypb.Empty) error
 type TestingEventRepo interface {
 	Send(ctx context.Context, msg *emptypb.Empty) error
 	Receive(ctx context.Context, handler Handler) error
-	Close() error
+	Close(ctx context.Context) error
 }
