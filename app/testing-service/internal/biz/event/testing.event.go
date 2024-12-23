@@ -22,7 +22,7 @@ func NewTestingEvent(
 	}
 }
 
-func (t testingEvent) Send(ctx context.Context, msg emptypb.Empty) error {
+func (t testingEvent) Send(ctx context.Context, msg *emptypb.Empty) error {
 	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
 }
 
