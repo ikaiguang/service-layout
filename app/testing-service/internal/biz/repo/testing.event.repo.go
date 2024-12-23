@@ -2,7 +2,7 @@ package bizrepos
 
 import (
 	"context"
-	"gitlab.realibox.cn/hubv3tools/protobuf/types/known/emptypb"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 type Handler func(context.Context, emptypb.Empty) error
