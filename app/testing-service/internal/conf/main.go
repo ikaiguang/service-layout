@@ -13,3 +13,7 @@ func LoadServiceConfig() []configutil.Option {
 		configutil.WithOtherConfig(serviceConfig),
 	}
 }
+
+func GetServiceConfig() *ServiceConfig {
+	return serviceConfig
+}
