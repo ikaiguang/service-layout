@@ -7,7 +7,7 @@ require (
 	github.com/go-kratos/kratos/v2 v2.8.3
 	github.com/google/wire v0.6.0
 	github.com/gorilla/websocket v1.5.3
-	github.com/ikaiguang/go-srv-kit v0.3.26
+	github.com/ikaiguang/go-srv-kit v0.3.32
 	github.com/stretchr/testify v1.10.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20241104194629-dd2ea8efbc28
 	google.golang.org/grpc v1.67.1
@@ -19,7 +19,7 @@ require (
 	dario.cat/mergo v1.0.0 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/ThreeDotsLabs/watermill v1.4.1 // indirect
-	github.com/ThreeDotsLabs/watermill-amqp/v2 v2.1.3 // indirect
+	github.com/ThreeDotsLabs/watermill-amqp/v3 v3.0.0 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/bwmarrin/snowflake v0.3.0 // indirect
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
