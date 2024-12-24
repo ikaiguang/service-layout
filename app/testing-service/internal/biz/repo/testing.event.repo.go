@@ -8,7 +8,7 @@ import (
 type Handler func(context.Context, *emptypb.Empty) error
 
 type TestingEventRepo interface {
-	Send(ctx context.Context, msg *emptypb.Empty) error
-	Receive(ctx context.Context, handler Handler) error
+	Publish(ctx context.Context, msg *emptypb.Empty) error
+	Consume(ctx context.Context, handler Handler) error
 	Close(ctx context.Context) error
 }

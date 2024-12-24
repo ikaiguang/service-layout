@@ -22,11 +22,11 @@ func NewTestingEvent(
 	}
 }
 
-func (t *testingEvent) Send(ctx context.Context, msg *emptypb.Empty) error {
+func (t *testingEvent) Publish(ctx context.Context, msg *emptypb.Empty) error {
 	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
 }
 
-func (t *testingEvent) Receive(ctx context.Context, handler bizrepos.Handler) error {
+func (t *testingEvent) Consume(ctx context.Context, handler bizrepos.Handler) error {
 	return errorpkg.WithStack(errorpkg.ErrorUnimplemented("implement me"))
 }
 
