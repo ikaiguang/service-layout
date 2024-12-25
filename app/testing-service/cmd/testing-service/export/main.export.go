@@ -8,7 +8,6 @@ import (
 	serverutil "github.com/ikaiguang/go-srv-kit/service/server"
 	setuputil "github.com/ikaiguang/go-srv-kit/service/setup"
 	testingapi "github.com/ikaiguang/service-layout/api/testing-service"
-	servicev1 "github.com/ikaiguang/service-layout/api/testing-service/v1/services"
 	"github.com/ikaiguang/service-layout/app/testing-service/cmd/database-migration/migrate"
 	"github.com/ikaiguang/service-layout/app/testing-service/internal/conf"
 )
@@ -57,8 +56,4 @@ func ExportDatabaseMigration() []dbutil.MigrationFunc {
 	return []dbutil.MigrationFunc{
 		dbmigrate.Run,
 	}
-}
-
-func ExportNodeIDV1Service(launcherManager setuputil.LauncherManager) (servicev1.SrvTestdataServer, error) {
-	return exportTestdataServer(launcherManager)
 }
