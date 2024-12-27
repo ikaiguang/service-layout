@@ -25,7 +25,7 @@ func NewTestingV1Service(logger log.Logger, testingBiz bizrepos.TestingBizRepo) 
 }
 
 func (s *testingV1Service) Get(ctx context.Context, req *resourcev1.TestReq) (*resourcev1.TestResp, error) {
-	param := dto.TestingDto.ToBHelloWorldParam(req)
+	param := dto.TestingDto.ToBoHelloWorldParam(req)
 	reply, err := s.testingBiz.HelloWorld(ctx, param)
 	if err != nil {
 		return nil, err

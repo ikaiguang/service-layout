@@ -11,7 +11,7 @@ var (
 
 type testingDto struct{}
 
-func (s *testingDto) ToBHelloWorldParam(req *resourcev1.TestReq) *bo.HelloWorldParam {
+func (s *testingDto) ToBoHelloWorldParam(req *resourcev1.TestReq) *bo.HelloWorldParam {
 	res := &bo.HelloWorldParam{
 		Message: req.Message,
 	}
