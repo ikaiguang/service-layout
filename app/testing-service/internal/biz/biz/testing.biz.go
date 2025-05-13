@@ -28,7 +28,7 @@ func NewTestingBiz(
 }
 
 func (s *testingBiz) HelloWorld(ctx context.Context, param *bo.HelloWorldParam) (*bo.HelloWorldReply, error) {
-	dataModel := s.tooHelloWorkModel(param)
+	dataModel := s.toHelloWorkModel(param)
 	err := s.testingData.HelloWorld(ctx, dataModel)
 	if err != nil {
 		return nil, err
@@ -36,7 +36,7 @@ func (s *testingBiz) HelloWorld(ctx context.Context, param *bo.HelloWorldParam) 
 	return &bo.HelloWorldReply{Message: dataModel.RequestMessage}, nil
 }
 
-func (s *testingBiz) tooHelloWorkModel(param *bo.HelloWorldParam) *po.HelloWorld {
+func (s *testingBiz) toHelloWorkModel(param *bo.HelloWorldParam) *po.HelloWorld {
 	res := &po.HelloWorld{
 		Id:             0,
 		CreatedTime:    time.Now(),
